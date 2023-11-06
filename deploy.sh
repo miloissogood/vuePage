@@ -10,5 +10,6 @@ git init //因為dist資料夾預設是被ignore的，因此在進入dist資料�
 git add -A
 git commit -m 'deploy'
 
-git subtree push --prefix dist https://github.com/miloissogood/vuePage.git gh-pages
 cd -
+git subtree push --prefix dist https://github.com/miloissogood/vuePage.git gh-pages
+
