@@ -9,7 +9,6 @@ cd dist
 git init //因為dist資料夾預設是被ignore的，因此在進入dist資料夾後初始化git
 git add -A
 git commit -m 'deploy'
-# 部署到 https://github.com/miloissogood/vuePage.git 分支為 gh-pages
-git push -f https://github.com/miloissogood/vuePage.git master:gh-pages
 
+git subtree push --prefix dist https://github.com/miloissogood/vuePage.git gh-pages
 cd -
