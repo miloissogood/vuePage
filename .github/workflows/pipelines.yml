@@ -17,7 +17,7 @@ jobs:
       run: npm install
     - name: Install vue and @vue/compiler-sfc
       run: |
-        npm install vue@3.3.7 --save-dev
+        npm install vue@3.2.13 --save-dev
         npm install @vue/compiler-sfc --save-dev
     - name: Build
       run: npm run build
