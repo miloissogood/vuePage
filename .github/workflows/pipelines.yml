@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   test:
@@ -13,13 +13,17 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 12.x
-    - run: npm install
-    - run: npm install vue@3.3.7 --save-dev
-    - run: npm install @vue/compiler-sfc --save-dev
-    - run: npm run build
-    - name: Deploy 🚀
+    - name: Install dependencies
+      run: npm install
+    - name: Install vue and @vue/compiler-sfc
+      run: |
+        npm install vue@3.3.7 --save-dev
+        npm install @vue/compiler-sfc --save-dev
+    - name: Build
+      run: npm run build
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-          ACCESS_TOKEN: ${{ secrets.forCI }}
-          BRANCH: gh-pages
-          FOLDER: dist
+        ACCESS_TOKEN: ${{ secrets.forCI }}
+        BRANCH: gh-pages
+        FOLDER: dist
