@@ -14,6 +14,7 @@ jobs:
       with:
         node-version: 12.x
     - run: npm install
+    - run: npm install vue@3.3.7 --save-dev
     - run: npm install @vue/compiler-sfc --save-dev
     - run: npm run build
     - name: Deploy 🚀
