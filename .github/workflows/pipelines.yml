@@ -15,9 +15,9 @@ jobs:
         node-version: 12.x
     - run: npm install
     - run: npm run build
-- name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-          ACCESS_TOKEN: ${{ secrets.forCI }}
-          BRANCH: gh-pages
-          FOLDER: dist
+    - name: Deploy 🚀
+          uses: JamesIves/github-pages-deploy-action@releases/v3
+          with:
+              ACCESS_TOKEN: ${{ secrets.forCI }}
+              BRANCH: gh-pages
+              FOLDER: dist
