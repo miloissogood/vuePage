@@ -24,6 +24,7 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
+        repo: https://miloissogood:${{ secrets.forCI }}@github.com/miloissogood/vuePage.git
         ACCESS_TOKEN: ${{ secrets.forCI }}
         BRANCH: gh-pages
         FOLDER: dist
