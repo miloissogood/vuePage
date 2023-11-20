@@ -24,6 +24,6 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        ACCESS_TOKEN: ${{ secrets.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 }}
+        ACCESS_TOKEN: ${{ secrets.forCI }}
         BRANCH: gh-pages
         FOLDER: dist
